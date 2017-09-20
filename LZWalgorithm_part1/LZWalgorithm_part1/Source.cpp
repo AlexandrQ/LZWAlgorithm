@@ -1,23 +1,27 @@
 #include <iostream>
 #include "LZWAlg.h"
 #include "LZWDecoding.h"
+#include <conio.h>
+#include <string>
 
 using namespace std;
 
 int main() {   
+
+    setlocale(LC_ALL, "Russian"); 
     
-    LZWAlg objOne("eedded");  //abacabadabacabae
-    objOne.coding();
-    objOne.showDictionary();
-    objOne.showStream();
-
-    LZWDecoding objTwo(objOne.getStream(), objOne.getRootDict());
+    LZWAlg objOne;    
+    objOne.coding();            
+    objOne.showDictionary();    
+    objOne.showStream(); 
+    
+    LZWDecoding objTwo;
+    
     objTwo.decoding();
-    objTwo.showDictionary();
-
-    cout << endl << "eedded" << endl;
+    objTwo.showDictionary();    
     objTwo.showStreamStr();
-
-    system("Pause");
+    cout << "Done!";
+    _getch();
+    
     return 0;
 }

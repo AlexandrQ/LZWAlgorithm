@@ -14,7 +14,7 @@ private:
     int count,
         len,
         countStr;
-    string str, strBuff;
+    string inputStream, strBuff;
     bool strBuffInDictionary;
         
     map<int, string> dictionary, rootDict;
@@ -33,6 +33,9 @@ public:
     void showDictionary();
     map<int, string> getRootDict();
     vector<int> getStream();
+    void wOutStreamInFile(vector<int> wVec);
+    void wRootDictInFile(map<int, string>);
 
+    void inStreamFromFile();
  };
 
